@@ -1,5 +1,8 @@
 from tkinter import *
 def guess_low(self):
+    """
+    window for when entry is lower than number
+    """
     self.clear_screen()
     self.low_guess_label = Label(self.root,text="Number is greater\nthan your guess",font=("arial",14,"bold italic"))
     self.low_guess_label.pack()

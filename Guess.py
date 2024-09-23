@@ -10,6 +10,10 @@ from Guess_Low import guess_low
 from Guess_Great import guess_great
 
 class Guess:
+    """
+    Creating Main menu with tkinter.
+    
+    """
     def __init__(self,root):
         self.root = root
         self.root.geometry("300x200")
@@ -22,6 +26,10 @@ class Guess:
         self.try_chance = 3
 
     def update_menu(self):
+        """
+        Deletes the current window for next window with 
+        loop
+        """
         for i in self.root.winfo_children():
             i.destroy()
 
@@ -30,7 +38,11 @@ class Guess:
         time.sleep(1)
         play_menu(self)
 
-    def enter_number(self):        
+    def enter_number(self):
+        """
+        Takes the input and gives feedback for each condition
+        when answer is not correct minus the try chance 
+        """       
         try :
             number = self.text_guess.get("1.0",END)
             number = number.strip()
