@@ -4,7 +4,6 @@ import random
 def play_menu(self):
     self.clear_screen()
     self.retained_number = random.randint(0,9)
-    print(self.retained_number)                 # TEST SATIRI
     self.label_start = Label(self.root,text="Guess the number\nIm holding ?",font=("arial",14,"bold italic")).pack()
     
     self.text_guess = Text(self.root,width=11,height=1)
